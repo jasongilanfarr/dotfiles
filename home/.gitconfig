@@ -1,0 +1,35 @@
+[color]
+   ui = auto
+   branch = auto
+   status = auto
+   diff = auto
+[color "branch"]
+   current = yellow reverse
+   local = yellow
+   remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+   added = yellow
+   changed = green
+   untracked = cyan
+[alias]
+   st = status
+   br = branch
+   co = checkout
+   t = tag
+[merge]
+   keepBackup = false
+   renamelimit = 21000
+[user]
+	name = Jason Gilanfarr
+	email = jason@upthere.com 
+	signingkey = C543D6C2
+[core]
+	editor = /usr/bin/vim
+[push]
+    default = simple

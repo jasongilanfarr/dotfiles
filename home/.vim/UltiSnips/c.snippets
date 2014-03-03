@@ -1,0 +1,62 @@
+snippet hc
+//
+// `!v expand('%:t')`
+//
+// Created by Jason Gilanfarr on `date +%m/%d/%Y`
+// Copyright `date +%Y` upthere, inc.. All rights reserved.
+//
+
+endsnippet
+
+snippet afor
+for (nat i = 0, num = count($1); i < num; ++i) {
+    $2
+}
+endsnippet
+
+snippet bz
+memset($1, 0, sizeof(*$1))
+endsnippet
+
+snippet obj
+OBJECT_DEFINE($1, the_object_type)
+
+extern $1_t $1($2);
+endsnippet
+
+snippet obj-impl
+OBJECT_STRUCT($1) {
+    OBJECT_HEADER
+    $2
+};
+
+static void $1_finalize(object_t o) {
+    $1_t $3 = o;
+    $4
+}
+
+static const char *$1_describe(object_t o) {
+    $1_t $5 = o;
+    return format("$1($6)");
+}
+
+OBJECT_TYPE_IMPLEMENT($1, NULL, finalize, describe)
+
+$1_t $1($7) {
+    $1_t $8 = create($1_type());
+    $9
+    return $8;
+}
+
+endsnippet
+
+snippet obj-method
+$1 $2_$3($2_t $4) {
+    $5
+}
+endsnippet
+
+snippet mark15
+#pragma mark =============== $1 ===============
+endsnippet
+
