@@ -54,7 +54,7 @@ set bg=light
 set wildignore+=*.o,*.obj,.git,*.pyc,*.pdf,*.node,*.dep
 " always expand tabs to spaces for python
 au BufRead,BufNewFile *.py set expandtab
-" change to the current directory 
+" change to the current directory
 "autocmd BufEnter * silent! lcd %:p:h
 set cursorline
 
@@ -78,21 +78,18 @@ call vundle#rc()
 "let vundle manage vundle
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'TagHighlight'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Tagbar'
 Bundle 'UltiSnips'
 Bundle 'tpope/vim-surround'
 Bundle 'bling/vim-airline'
+Bundle 'Rip-Rip/clang_complete'
 
 filetype plugin indent on
 
-let g:ycm_confirm_extra_conf = 0
 let g:TagHighlightSettings = {'TypesFileDirModePriority': 'Explicit', 'TypesFileDirectory' : '/Users/jason/.tmp' }
 let g:UltiSnipsExpandTrigger='<c-j>'
-let g:ycm_autoclose_preview_window_after_insertion=1
 "set term=xterm-256color
 set t_Co=256
 set laststatus=2
