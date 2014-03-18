@@ -54,7 +54,7 @@ set bg=light
 set wildignore+=*.o,*.obj,.git,*.pyc,*.pdf,*.node,*.dep
 " always expand tabs to spaces for python
 au BufRead,BufNewFile *.py set expandtab
-" change to the current directory
+" change to the current directory 
 "autocmd BufEnter * silent! lcd %:p:h
 set cursorline
 

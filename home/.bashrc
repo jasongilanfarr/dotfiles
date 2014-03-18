@@ -3,7 +3,7 @@ source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
 if [ -f /usr/local/bin/brew ]; then
 if [ -f `brew --prefix`/etc/bash_completion ]; then
-	. `brew --prefix`/etc/bash_completion
+    source `brew --prefix`/etc/bash_completion
 fi
 fi
 
@@ -117,10 +117,24 @@ function tabc {
   NAME=$1; if [ -z "$NAME" ]; then NAME="Default"; fi
   osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"$NAME\""
 }
- 
+
 function ssh {
-  tabc "Solarized Light"
+  tabc "IR_Black"
   /usr/bin/ssh "$@"
   tabc "Solarized Dark"
 }
+
+function startvm {
+    "/Applications/VMware Fusion.app/Contents/Library/vmrun" -T fusion start  ~/Documents/Virtual\ Machines.localized/Ubuntu\ 64-bit.vmwarevm/ nogui
+}
+
+function stopvm {
+    "/Applications/VMware Fusion.app/Contents/Library/vmrun" -T fusion suspend  ~/Documents/Virtual\ Machines.localized/Ubuntu\ 64-bit.vmwarevm/ nogui
+}
+
+function linuxvm {
+    startvm
+    ssh -A 192.168.128.207
+}
+
 
