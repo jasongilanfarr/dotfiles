@@ -1,0 +1,8 @@
+--regex-c=/OBJECT_TYPE_DEFINE\((.*),.*\)/\1_t/
+--regex-c++=/OBJECT_TYPE_DEFINE\((.*),.*\)/\1_t/
+--regex-c=/UP_UNIT_TEST\((.*), (.*)\)/\1_\2/
+--exclude=3rdparty/boost
+--exclude=3rdparty/lucene
+--exclude=3rdparty/openssl
+--exclude=prod/folio/web
+-R

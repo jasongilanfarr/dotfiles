@@ -32,6 +32,8 @@ set spell
 " Highlight Trailing Whitespace
 highlight ExtraWhitespace guibg=red
 match ExtraWhitespace /\s\+$/
+" And strip it on write
+autocmd BufWritePre * :%s/\s\+$//e
 " Show the command in the last line of the screen
 set showcmd
 " Save the file if it has been modified on certain conditions
@@ -49,7 +51,7 @@ set guioptions-=T
 " Syntax Highlight by default
 syntax on
 " dark background
-set bg=light
+set bg=dark
 " ignore build-style files when globbing.
 set wildignore+=*.o,*.obj,.git,*.pyc,*.pdf,*.node,*.dep
 " always expand tabs to spaces for python
@@ -85,10 +87,11 @@ Bundle 'UltiSnips'
 Bundle 'tpope/vim-surround'
 Bundle 'bling/vim-airline'
 Bundle 'Rip-Rip/clang_complete'
+Bundle 'twerth/ir_black'
+Bundle 'vim-scripts/AutoComplPop'
 
 filetype plugin indent on
 
-let g:TagHighlightSettings = {'TypesFileDirModePriority': 'Explicit', 'TypesFileDirectory' : '/Users/jason/.tmp' }
 let g:UltiSnipsExpandTrigger='<c-j>'
 "set term=xterm-256color
 set t_Co=256
@@ -97,3 +100,19 @@ let g:solarized_termcolors = &t_Co
 let g:solarized_termtrans = 1
 colors solarized
 
+let g:clang_use_library = 1
+let g:clang_complete_auto = 1
+let g:clang_hl_errors = 1
+let g:clang_snippets=1
+let g:clang_snippets_engine="clang_complete"
+let g:clang_complete_macros=1
+let g:clang_complete_patterns=1
+
+set tags=./tags
+
+if ! exists('g:TagHighlightSettings')
+    let g:TagHighlightSettings = {}
+endif
+
+let g:TagHighlightSettings['TagFileName'] = 'tags'
+let g:TagHighlightSettings['TypesFileDirectory'] = '/Users/jason/.tmp/'

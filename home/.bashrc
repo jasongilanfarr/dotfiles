@@ -82,7 +82,7 @@ GIT_PS1_SHOWCOLORHINTS=1
 export ANDROID_STANDALONE_NDK=/usr/local/android-ndk-r9-clang
 export ANDROID_SDK=/usr/local/Cellar/android-sdk/22.3
 export ANDROID_HOME=$ANDROID_SDK
-export PATH=$PATH:/usr/local/android-ndk-r9b
+export PATH=$PATH:/usr/local/android-ndk-r9b:/usr/local/facebook/arcanist/bin
 if [ -f /usr/local/bin/gls ]; then
     alias ls='gls --color=auto'
 else
