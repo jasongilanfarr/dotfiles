@@ -86,9 +86,10 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'UltiSnips'
 Bundle 'tpope/vim-surround'
 Bundle 'bling/vim-airline'
-Bundle 'Rip-Rip/clang_complete'
+"Bundle 'Rip-Rip/clang_complete'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'twerth/ir_black'
-Bundle 'vim-scripts/AutoComplPop'
+Bundle 'vim-scripts/blackboard.vim'
 
 filetype plugin indent on
 
@@ -100,13 +101,14 @@ let g:solarized_termcolors = &t_Co
 let g:solarized_termtrans = 1
 colors solarized
 
-let g:clang_use_library = 1
-let g:clang_complete_auto = 1
-let g:clang_hl_errors = 1
-let g:clang_snippets=1
-let g:clang_snippets_engine="clang_complete"
-let g:clang_complete_macros=1
-let g:clang_complete_patterns=1
+"let g:clang_use_library = 1
+"let g:clang_complete_auto = 1
+"let g:clang_hl_errors = 1
+"let g:clang_snippets=1
+"let g:clang_complete_macros=1
+"let g:clang_complete_patterns=1
+"let g:clang_periodic_quickfix=1
+"let g:clang_snippets_engine="ultisnips"
 
 set tags=./tags
 
@@ -116,3 +118,6 @@ endif
 
 let g:TagHighlightSettings['TagFileName'] = 'tags'
 let g:TagHighlightSettings['TypesFileDirectory'] = '/Users/jason/.tmp/'
+
+let g:ycm_collect_identifiers_from_tags_files=1
+let g:ycm_confirm_extra_conf=0
