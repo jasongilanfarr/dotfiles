@@ -83,6 +83,8 @@ export ANDROID_STANDALONE_NDK=/usr/local/android-ndk-r9-clang
 export ANDROID_SDK=/usr/local/Cellar/android-sdk/22.3
 export ANDROID_HOME=$ANDROID_SDK
 export PATH=$PATH:/usr/local/android-ndk-r9b:/usr/local/facebook/arcanist/bin
+export EDITOR=vim
+
 if [ -f /usr/local/bin/gls ]; then
     alias ls='gls --color=auto'
 else
@@ -134,7 +136,7 @@ function stopvm {
 
 function linuxvm {
     startvm
-    ssh -A 192.168.128.207
+    ssh -A 192.168.111.128
 }
 
 
