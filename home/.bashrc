@@ -63,8 +63,6 @@ else
 fi
 
 export PATH=/opt/cmake/bin:/opt/llvm/bin:/usr/local/bin:$PATH
-export PROD="--gateway=https://production.upthere.com"
-export STAGING="--gateway=https://staging.upthere.com"
 export PS1="\[${BOLD}${GREEN}\]\u\[$YELLOW\]@\[$BLUE\]\h:\[$ORANGE\]\w\[$RED\]\$(__git_ps1)\[$YELLOW\] \$ \[$RESET\]"
 
 homeshick --quiet refresh
@@ -79,7 +77,6 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWCOLORHINTS=1
 
-export ANDROID_STANDALONE_NDK=/usr/local/android-ndk-r9-clang
 export ANDROID_SDK=/usr/local/Cellar/android-sdk/22.3
 export ANDROID_HOME=$ANDROID_SDK
 export PATH=$PATH:/usr/local/android-ndk-r9b:/usr/local/facebook/arcanist/bin
@@ -115,11 +112,6 @@ function repeat {
     done
 }
 
-function tabc {
-  NAME=$1; if [ -z "$NAME" ]; then NAME="Default"; fi
-  osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"$NAME\""
-}
-
 function ssh {
   tabc "IR_Black"
   /usr/bin/ssh "$@"
@@ -127,16 +119,10 @@ function ssh {
 }
 
 function startvm {
-    "/Applications/VMware Fusion.app/Contents/Library/vmrun" -T fusion start  ~/Documents/Virtual\ Machines.localized/Ubuntu\ 64-bit.vmwarevm/ nogui
+    "/Applications/VMware Fusion.app/Contents/Library/vmrun" -T fusion start ~/Documents/Virtual\ Machines.localized/k8s-master.vmwarevm/ nogui
 }
 
 function stopvm {
-    "/Applications/VMware Fusion.app/Contents/Library/vmrun" -T fusion suspend  ~/Documents/Virtual\ Machines.localized/Ubuntu\ 64-bit.vmwarevm/ nogui
+    "/Applications/VMware Fusion.app/Contents/Library/vmrun" -T fusion suspend  ~/Documents/Virtual\ Machines.localized/k8s-master.vmwarevm/ nogui
 }
-
-function linuxvm {
-    startvm
-    ssh -A 192.168.111.128
-}
-
 
