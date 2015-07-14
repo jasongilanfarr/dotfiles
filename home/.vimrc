@@ -90,6 +90,7 @@ Bundle 'bling/vim-airline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'twerth/ir_black'
 Bundle 'vim-scripts/blackboard.vim'
+Bundle 'markcornick/vim-terraform'
 
 filetype plugin indent on
 

@@ -1,6 +1,6 @@
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
-
+ complete -C aws_completer aws
 if [ -f /usr/local/bin/brew ]; then
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     source `brew --prefix`/etc/bash_completion
@@ -62,7 +62,7 @@ else
     RESET="\033[m"
 fi
 
-export PATH=/opt/cmake/bin:/opt/llvm/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 export PS1="\[${BOLD}${GREEN}\]\u\[$YELLOW\]@\[$BLUE\]\h:\[$ORANGE\]\w\[$RED\]\$(__git_ps1)\[$YELLOW\] \$ \[$RESET\]"
 
 homeshick --quiet refresh
@@ -80,7 +80,7 @@ GIT_PS1_SHOWCOLORHINTS=1
 export ANDROID_SDK=/usr/local/Cellar/android-sdk/22.3
 export ANDROID_HOME=$ANDROID_SDK
 export PATH=$PATH:/usr/local/android-ndk-r9b:/usr/local/facebook/arcanist/bin
-export EDITOR="mvim -f"
+export EDITOR="vim"
 
 if [ -f /usr/local/bin/gls ]; then
     alias ls='gls --color=auto'
@@ -112,17 +112,19 @@ function repeat {
     done
 }
 
-function ssh {
-  tabc "IR_Black"
-  /usr/bin/ssh "$@"
-  tabc "Solarized Dark"
-}
-
 function startvm {
-    "/Applications/VMware Fusion.app/Contents/Library/vmrun" -T fusion start ~/Documents/Virtual\ Machines.localized/k8s-master.vmwarevm/ nogui
+    "/Applications/VMware Fusion.app/Contents/Library/vmrun" -T fusion start ~/Documents/Virtual\ Machines.localized/coreos/coreos_production_vmware_insecure.vmx nogui
 }
 
 function stopvm {
-    "/Applications/VMware Fusion.app/Contents/Library/vmrun" -T fusion suspend  ~/Documents/Virtual\ Machines.localized/k8s-master.vmwarevm/ nogui
+    "/Applications/VMware Fusion.app/Contents/Library/vmrun" -T fusion suspend  ~/Documents/Virtual\ Machines.localized/coreos/coreos_production_vmware_insecure.vmx nogui
 }
 
+alias vimr='open -a VimR'
+
+export DOCKER_HOST=tcp://jason-coreos.local:2375
+
+if [[ -d /opt/homebrew-cask/Caskroom/google-cloud-sdk ]]; then
+    source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+    source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+fi
