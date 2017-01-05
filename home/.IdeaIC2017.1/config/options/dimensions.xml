@@ -1,0 +1,30 @@
+<application>
+  <component name="DimensionService">
+    <location key="FileChooserDialogImpl.0.0.3440.1440" x="1503" y="296" />
+    <location key="NewModule_or_Project.wizard.0.0.3440.1440" x="2121" y="310" />
+    <location key="WELCOME_SCREEN.0.0.3440.1440" x="1720" y="230" />
+    <location key="com.intellij.ide.util.TipDialog.0.0.3440.1440" x="1431" y="525" />
+    <location key="#Browse_Repositories.0.0.3440.1440" x="1297" y="365" />
+    <location key="SettingsEditor.0.0.3440.1440" x="1607" y="342" />
+    <location key="#Notifications.0.0.3440.1440" x="1015" y="321" />
+    <location key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.3440.1440" x="968" y="475" />
+    <location key="#com.intellij.execution.impl.EditConfigurationsDialog.0.0.3440.1440" x="1042" y="359" />
+    <location key="#xdebugger.evaluate.0.0.3440.1440" x="1302" y="467" />
+    <size key="FileChooserDialogImpl.0.0.3440.1440" width="492" height="539" />
+    <size key="NewModule_or_Project.wizard.0.0.3440.1440" width="745" height="607" />
+    <size key="#Browse_Repositories.0.0.3440.1440" width="824" height="701" />
+    <size key="SettingsEditor.0.0.3440.1440" width="1199" height="872" />
+    <size key="#Notifications.0.0.3440.1440" width="472" height="580" />
+    <size key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.3440.1440" width="566" height="272" />
+    <size key="GridCell.Tab.0.left.0.0.3440.1440" width="1726" height="401" />
+    <size key="GridCell.Tab.0.center.0.0.3440.1440" width="1726" height="401" />
+    <size key="GridCell.Tab.0.right.0.0.3440.1440" width="1726" height="401" />
+    <size key="GridCell.Tab.0.bottom.0.0.3440.1440" width="1726" height="401" />
+    <size key="GridCell.Tab.1.left.0.0.3440.1440" width="1726" height="401" />
+    <size key="GridCell.Tab.1.center.0.0.3440.1440" width="1726" height="401" />
+    <size key="GridCell.Tab.1.right.0.0.3440.1440" width="1726" height="401" />
+    <size key="GridCell.Tab.1.bottom.0.0.3440.1440" width="1726" height="401" />
+    <size key="#com.intellij.execution.impl.EditConfigurationsDialog.0.0.3440.1440" width="1084" height="725" />
+    <size key="#xdebugger.evaluate.0.0.3440.1440" width="1216" height="312" />
+  </component>
+</application>

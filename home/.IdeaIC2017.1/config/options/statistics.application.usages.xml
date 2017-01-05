@@ -1,0 +1,18 @@
+<application>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="StripeButton[Version Control].shown" count="1" />
+      <entry feature="execute.ScalaTestRunConfiguration.Debug" count="10" />
+      <entry feature="ide.settings.Appearance" count="12" />
+      <entry feature="ide.settings.Colors_&amp;_Fonts" count="18" />
+      <entry feature="ide.settings.Font" count="32" />
+      <entry feature="ide.settings.Plugins" count="3" />
+      <entry feature="ide.settings.Scala" count="1" />
+      <entry feature="ideaapp.started" count="12" />
+      <entry feature="scala.file.script.parsed" count="11206" />
+      <entry feature="scala.file.with.type.aware.annotated" count="55" />
+      <entry feature="terminal.linux" count="5" />
+      <entry feature="welcome.screen.WelcomeScreen.ImportProject" count="1" />
+    </counts>
+  </component>
+</application>

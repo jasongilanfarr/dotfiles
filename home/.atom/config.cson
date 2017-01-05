@@ -1,0 +1,7 @@
+"*":
+  core: {}
+  editor:
+    fontSize: 10
+  "exception-reporting":
+    userId: "a1e0aaed-1aa3-928c-30d1-700727d9ec25"
+  fonts: {}

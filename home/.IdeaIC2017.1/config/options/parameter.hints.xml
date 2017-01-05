@@ -1,0 +1,7 @@
+<application>
+  <component name="ParameterNameHintsSettings">
+    <blacklists />
+    <showIfParamNameContained value="true" />
+    <showWhenMultipleParamsWithSameType value="false" />
+  </component>
+</application>

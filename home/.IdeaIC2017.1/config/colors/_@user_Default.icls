@@ -1,0 +1,17 @@
+<scheme name="_@user_Default" version="142" parent_scheme="Default">
+  <option name="FONT_SCALE" value="1.0" />
+  <metaInfo>
+    <property name="created">2017-01-04T17:23:08</property>
+    <property name="ide">Idea</property>
+    <property name="ideVersion">2017.1.0.0</property>
+    <property name="modified">2017-01-04T17:25:50</property>
+    <property name="originalScheme">Default</property>
+  </metaInfo>
+  <option name="EDITOR_FONT_SIZE" value="12" />
+  <option name="EDITOR_FONT_NAME" value="DejaVu Sans Mono" />
+  <attributes>
+    <option name="TEXT">
+      <value />
+    </option>
+  </attributes>
+</scheme>

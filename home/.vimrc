@@ -72,6 +72,7 @@ if _file =~ "Makefile" || _file =~ "makefile" || _file =~ ".*\.mk"
 set noexpandtab
 endif
 
+
 "vundle
 filetype off
 set rtp+=~/.vim/bundle/vundle
@@ -83,42 +84,17 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'TagHighlight'
 Bundle 'kien/ctrlp.vim'
-Bundle 'UltiSnips'
 Bundle 'tpope/vim-surround'
 Bundle 'bling/vim-airline'
-"Bundle 'Rip-Rip/clang_complete'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'twerth/ir_black'
 Bundle 'vim-scripts/blackboard.vim'
-Bundle 'markcornick/vim-terraform'
 
 filetype plugin indent on
 
-let g:UltiSnipsExpandTrigger='<c-j>'
-"set term=xterm-256color
 set t_Co=256
 set laststatus=2
 let g:solarized_termcolors = &t_Co
 let g:solarized_termtrans = 1
 colors solarized
 
-"let g:clang_use_library = 1
-"let g:clang_complete_auto = 1
-"let g:clang_hl_errors = 1
-"let g:clang_snippets=1
-"let g:clang_complete_macros=1
-"let g:clang_complete_patterns=1
-"let g:clang_periodic_quickfix=1
-"let g:clang_snippets_engine="ultisnips"
 
-set tags=./tags
-
-if ! exists('g:TagHighlightSettings')
-    let g:TagHighlightSettings = {}
-endif
-
-let g:TagHighlightSettings['TagFileName'] = 'tags'
-let g:TagHighlightSettings['TypesFileDirectory'] = '/Users/jason/.tmp/'
-
-let g:ycm_collect_identifiers_from_tags_files=1
-let g:ycm_confirm_extra_conf=0

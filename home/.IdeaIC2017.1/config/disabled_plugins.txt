@@ -1,0 +1,16 @@
+AAHack
+AntSupport
+CVS
+DevKit
+Subversion
+TestNG-J
+XPathView
+XSLT-Debugger
+cn.robin.vectorIconPack
+com.intellij.tasks
+com.intellij.uiDesigner
+hg4idea
+org.jetbrains.android
+org.jetbrains.idea.eclipse
+org.jetbrains.idea.maven
+org.jetbrains.plugins.gradle
