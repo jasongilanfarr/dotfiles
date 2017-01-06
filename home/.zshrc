@@ -1,3 +1,10 @@
+export SSH_ASKPASS=/usr/bin/ssh-askpass
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 export ZSH=/home/jason/.oh-my-zsh
