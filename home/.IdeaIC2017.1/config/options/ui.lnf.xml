@@ -5,5 +5,7 @@
     <option name="HIDE_TOOL_STRIPES" value="false" />
     <option name="WIDESCREEN_SUPPORT" value="true" />
     <option name="OVERRIDE_NONIDEA_LAF_FONTS" value="true" />
+    <option name="MAX_LOOKUP_WIDTH2" value="886" />
+    <option name="MAX_LOOKUP_LIST_HEIGHT" value="33" />
   </component>
 </application>

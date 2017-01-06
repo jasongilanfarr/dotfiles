@@ -6,14 +6,15 @@
     <property name="last.imported.location" value="$USER_HOME$/src/marathon" />
     <property name="create.project.preferred.importer" value="SBT" />
     <property name="lastTip" value="1" />
-    <property name="file.gist.reindex.count" value="5" />
+    <property name="file.gist.reindex.count" value="11" />
     <property name="PLUGIN_FILTER" value="Theme" />
     <property name="com.chrisrm.idea.MaterialThemeUI.theme" value="DEFAULT" />
     <property name="HbAutoCollapseBlocks" value="disabled" />
     <property name="HbCommenterLanguageId" value="HTML" />
     <property name="plugins.preselection.path" value="$USER_HOME$/Downloads" />
     <property name="Darcula.savedEditorTheme" value="_@user_Material Theme - Darker" />
-    <property name="scala.last.updated" value="1483580209321" />
+    <property name="scala.last.updated" value="1483682095716" />
     <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
   </component>
 </application>

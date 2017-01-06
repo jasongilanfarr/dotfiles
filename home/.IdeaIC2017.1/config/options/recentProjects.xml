@@ -5,11 +5,6 @@
         <option value="$USER_HOME$/src/marathon" />
       </list>
     </option>
-    <option name="openPaths">
-      <list>
-        <option value="$USER_HOME$/src/marathon" />
-      </list>
-    </option>
     <option name="lastPath" value="$USER_HOME$/src/marathon" />
     <option name="additionalInfo">
       <map>
@@ -20,8 +15,8 @@
               <option name="productionCode" value="IC" />
               <option name="eap" value="true" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1483661616501" />
-              <option name="buildTimestamp" value="1483016792105" />
+              <option name="projectOpenTimestamp" value="1483681507435" />
+              <option name="buildTimestamp" value="1483016817338" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
