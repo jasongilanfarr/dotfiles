@@ -27,7 +27,7 @@
    renamelimit = 21000
 [user]
 	name = Jason Gilanfarr
-	email = jason@highfive.com
+	email = jgilanfarr@linkedin.com
 	signingkey = C543D6C2
 [core]
 	editor = /usr/bin/vim

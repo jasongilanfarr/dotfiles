@@ -7,11 +7,11 @@ fi
 
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 
-export ZSH=/home/jason/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
