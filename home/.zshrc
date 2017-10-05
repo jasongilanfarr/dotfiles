@@ -18,7 +18,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump common-aliases debian docker encode64 git-extras httpie history jira sbt scala ssh-agent sudo supervisor)
+plugins=(git autojump common-aliases debian docker encode64 git-extras httpie history jira sbt scala ssh-agent sudo supervisor brews gpg-agent gradle)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,3 +27,5 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
    export EDITOR='nvim'
 fi
+
+ulimit -n 32000 2>&1 > /dev/null || true

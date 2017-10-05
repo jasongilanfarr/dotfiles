@@ -1,7 +1,17 @@
 "*":
-  core: {}
+  core:
+    telemetryConsent: "no"
   editor:
-    fontSize: 10
+    fontFamily: "Fira Code"
+    fontSize: 13
   "exception-reporting":
     userId: "a1e0aaed-1aa3-928c-30d1-700727d9ec25"
+  firacode:
+    scopes: [
+      "*"
+    ]
   fonts: {}
+  "plantuml-preview":
+    jarLocation: "/usr/local/Cellar/plantuml/1.2017.14/libexec/plantuml.jar"
+  welcome:
+    showOnStartup: false

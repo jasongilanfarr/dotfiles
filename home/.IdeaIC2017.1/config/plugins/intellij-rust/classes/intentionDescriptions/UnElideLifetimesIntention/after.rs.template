@@ -1,1 +1,0 @@
-fn foo<spot><'a></spot>(p: &<spot>'a</spot> i32) -> &<spot>'a</spot> i32 { p }

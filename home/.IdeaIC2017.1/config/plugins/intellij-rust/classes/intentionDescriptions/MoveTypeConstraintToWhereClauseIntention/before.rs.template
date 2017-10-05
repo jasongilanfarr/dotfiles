@@ -1,3 +1,0 @@
-fn foo<T: Sync>(t: T) {
-
-}

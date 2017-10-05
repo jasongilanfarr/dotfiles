@@ -1,9 +1,0 @@
-<application>
-  <component name="UpdatesConfigurable">
-    <pluginHosts>
-      <item value="https://plugins.jetbrains.com/plugins/eap/1347" />
-    </pluginHosts>
-    <option name="LAST_BUILD_CHECKED" value="IC-171.2014.21" />
-    <option name="UPDATE_CHANNEL_TYPE" value="eap" />
-  </component>
-</application>

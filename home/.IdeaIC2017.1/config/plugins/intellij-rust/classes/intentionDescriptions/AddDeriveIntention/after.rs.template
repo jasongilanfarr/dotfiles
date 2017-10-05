@@ -1,4 +1,0 @@
-<spot>#[derive(<caret>)]</spot>
-struct Example {
-    field: i32
-}

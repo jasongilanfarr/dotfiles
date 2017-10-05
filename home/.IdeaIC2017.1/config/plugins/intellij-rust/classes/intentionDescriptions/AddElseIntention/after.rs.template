@@ -1,5 +1,0 @@
-fn foo(a: i32, b: i32) {
-    if a == b {
-        println!("Equally");
-    }<spot> else {}</spot>
-}

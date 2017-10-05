@@ -22,6 +22,7 @@
    br = branch
    co = checkout
    t = tag
+	git = !exec git
 [merge]
    keepBackup = false
    renamelimit = 21000
