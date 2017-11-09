@@ -2,4 +2,6 @@
 
 cancelable in Global := true
 
+updateOptions := updateOptions.value.withCachedResolution(true)
+
 

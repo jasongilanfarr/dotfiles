@@ -29,3 +29,33 @@ else
 fi
 
 ulimit -n 32000 2>&1 > /dev/null || true
+
+#!/usr/bin/env bash
+
+curli_fabric="ei-ltx1"
+curli_prefix="d2://"
+curli_user="SUPERUSER:urn:li:system:0"
+
+function curli_base {
+  uri=$1
+  shift
+  curli --pretty-print -H "Authenticate: X-RestLI ${curli_user}" -H "X-RestLi-Protocol-Version: 2.0.0" \
+    --fabric "${curli_fabric}" "${curli_prefix}${uri}" $* 2>/dev/null
+}
+
+# usage: curli_get restliEndpoint otherArgs
+function curli_get {
+  curli_base $*
+}
+
+# usage curli_post restliEndpoint otherArgs << input from STDIN
+function curli_post {
+  curli_base $* -X POST -d @-
+}
+
+# usage curli_patch restliEndpoint otherArgs << input from STDIN
+function curli_patch {
+  jq '{patch: {"$set": .}}' | curli_post $* -H 'X-RestLi-Method: partial_update'
+}
+
+
