@@ -1,12 +1,5 @@
 export SSH_ASKPASS=/usr/bin/ssh-askpass
 
-if [ -n "$DESKTOP_SESSION" ];then
-    eval $(gnome-keyring-daemon --start)
-    export SSH_AUTH_SOCK
-fi
-
-source $HOME/.homesick/repos/homeshick/homeshick.sh
-
 export ZSH=$HOME/.oh-my-zsh
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -39,7 +32,7 @@ curli_user="SUPERUSER:urn:li:system:0"
 function curli_base {
   uri=$1
   shift
-  curli --pretty-print -H "Authenticate: X-RestLI ${curli_user}" -H "X-RestLi-Protocol-Version: 2.0.0" \
+  curli --pretty-print --verbose -H "Authenticate: X-RestLI ${curli_user}" -H "X-RestLi-Protocol-Version: 2.0.0" \
     --fabric "${curli_fabric}" "${curli_prefix}${uri}" $* 2>/dev/null
 }
 
@@ -57,5 +50,23 @@ function curli_post {
 function curli_patch {
   jq '{patch: {"$set": .}}' | curli_post $* -H 'X-RestLi-Method: partial_update'
 }
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+
+if [[ -f $HOME/.keychain/`hostname`-sh ]]; then
+    source $HOME/.keychain/`hostname`-sh
+fi
+
+if [[ $(uname) -eq "Linux" ]]; then
+    alias pbcopy="xclip -sel clip"
+fi
+
+
+export JAVA_HOME=/export/apps/jdk/JDK-1_8_0_121
+
+source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 

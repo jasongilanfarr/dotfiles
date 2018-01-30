@@ -15,7 +15,7 @@
     ]
   editor:
     fontFamily: "Fira Code"
-    fontSize: 11
+    fontSize: 15
   "exception-reporting":
     userId: "a1e0aaed-1aa3-928c-30d1-700727d9ec25"
   firacode:
