@@ -21,8 +21,12 @@
    st = status
    br = branch
    co = checkout
+   ca = commit -a --amend -C HEAD
    t = tag
-	git = !exec git
+   git = !exec git
+   ru = review update
+   r = review
+   sa = submit --async
 [merge]
    keepBackup = false
    renamelimit = 21000
