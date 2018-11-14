@@ -26,15 +26,21 @@
    git = !exec git
    ru = review update
    r = review
+   rc = review create -ag --guess-desc -o --no-prompt
+   rup = review update --parent
+   rcp = review create -ag --guess-desc -o --no-prompt --parent
    sa = submit --async
+   uc = !$HOME/src/update-commit.sh
+   np = !exec git --no-pager
+   acl = review status --verify-diff
 [merge]
    keepBackup = false
    renamelimit = 21000
+[core]
+	editor = /usr/bin/vim
+[push]
+  default = simple
 [user]
 	name = Jason Gilanfarr
 	email = jgilanfarr@linkedin.com
 	signingkey = C543D6C2
-[core]
-	editor = /usr/bin/vim
-[push]
-    default = simple

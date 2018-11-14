@@ -15,6 +15,8 @@ plugins=(git autojump common-aliases debian docker encode64 git-extras httpie hi
 
 source $ZSH/oh-my-zsh.sh
 
+alias g=git
+alias gn=git np
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
 else
@@ -35,6 +37,8 @@ fi
 if [[ $(uname) -eq "Linux" ]]; then
     alias pbcopy="xclip -sel clip"
 fi
+
+alias findrbs=/home/jgilanfa/src/lms-productivity-analysis-tools/build/lms-productivity-analysis-tools/deployable/bin/find_rbs
 
 
 export JAVA_HOME=/export/apps/jdk/JDK-1_8_0_121
@@ -90,7 +94,7 @@ function http_encode_urn() {
 
 # Base restli call
 function restli() {
-  curli -H 'Authenticate: X-RestLI SUPERUSER:urn:li:system:0'  --dv-auth SELF -ss --silent --logging-level ERROR --pretty-print  -H "X-RestLi-Protocol-Version: 2.0.0" -H "Accept: application/json" "$@"
+  curli -H 'Authenticate: X-RestLI SUPERUSER:urn:li:system:0'  --dv-auth SELF --logging-level ERROR --pretty-print  -H "X-RestLi-Protocol-Version: 2.0.0" -H "Accept: application/json" "$@"
 }
 
 function restli_get() {
@@ -155,5 +159,5 @@ function request_fast_access() {
 
   printf "$commands" | parallel --no-notice
 }
-
-
+export VOLTA_HOME="/Users/jgilanfa/.volta"
+grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
