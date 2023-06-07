@@ -34,11 +34,6 @@ if [[ -f $HOME/.keychain/`hostname`-sh ]]; then
     source $HOME/.keychain/`hostname`-sh
 fi
 
-if [[ $(uname) -eq "Linux" ]]; then
-    alias pbcopy="xclip -sel clip"
-    export JAVA_HOME=/export/apps/jdk/JDK-1_8_0_172
-fi
-
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 
@@ -125,5 +120,6 @@ function checkout() {
     cd $1
   fi
 }
+alias vim=nvim
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"

@@ -39,7 +39,8 @@
 [core]
 	editor = /usr/bin/vim
 [push]
-  default = simple
+	default = current
+	autoSetupRemote = true
 [user]
 	name = Jason Gilanfarr
 	email = jgilanfarr@linkedin.com
